@@ -93,9 +93,18 @@ header nav .nav-list .nav-links:hover {
 }
 
 .home-container span {
+  display: inline-block;
   color: #009dff;
   font-family: CedarvilleCursive;
   font-size: 80px;
+  font-style: italic;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.home-container span:hover {
+  -webkit-transform: rotateX(180deg) translateY(-50%);
+          transform: rotateX(180deg) translateY(-50%);
 }
 
 .about-container {
@@ -129,9 +138,19 @@ header nav .nav-list .nav-links:hover {
 }
 
 .about-container .about-text h1 span {
+  display: inline-block;
   color: #ff7b3e;
   font-family: CedarvilleCursive;
+  margin: 0 20px 0 0;
   font-size: 80px;
+  font-style: italic;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.about-container .about-text h1 span:hover {
+  -webkit-transform: rotateX(-180deg) translateY(50%);
+          transform: rotateX(-180deg) translateY(50%);
 }
 
 .about-container .about-text p {
@@ -145,6 +164,7 @@ header nav .nav-list .nav-links:hover {
   color: lightgray;
   font-family: CedarvilleCursive;
   font-size: 40px;
+  font-style: italic;
 }
 
 .about-container .about-img {

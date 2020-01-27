@@ -82,9 +82,16 @@ header {
   }
 
   span {
+    display: inline-block;
     color: rgb(0, 157, 255);
     font-family: CedarvilleCursive;
     font-size: 80px;
+    font-style: italic;
+    transition: 0.75s;
+  }
+
+  span:hover {
+    transform: rotateX(180deg) translateY(-50%);
   }
 }
 
@@ -107,9 +114,17 @@ header {
       font-size: 50px;
 
       span {
+        display: inline-block;
         color: #ff7b3e;
         font-family: CedarvilleCursive;
+        margin: 0 20px 0 0;
         font-size: 80px;
+        font-style: italic;
+        transition: 0.75s;
+      }
+
+      span:hover {
+        transform: rotateX(-180deg) translateY(50%);
       }
     }
 
@@ -123,6 +138,7 @@ header {
         color: rgb(211, 211, 211);
         font-family: CedarvilleCursive;
         font-size: 40px;
+        font-style: italic;
       }
     }
   }
