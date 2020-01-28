@@ -1,21 +1,21 @@
 @font-face {
   font-family: PoppinsLight;
-  src: url('../fonts/Poppins-Light.ttf');
+  src: url("../fonts/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url('../fonts/Poppins-Regular.ttf');
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: CedarvilleCursive;
-  src: url('../fonts/CedarvilleCursive-Regular.ttf');
+  src: url("../fonts/CedarvilleCursive-Regular.ttf");
 }
 
 @font-face {
   font-family: Kalimata;
-  src: url('../fonts/KallimataScript.ttf');
+  src: url("../fonts/KallimataScript.ttf");
 }
 
 *,
@@ -81,17 +81,33 @@ header {
     font-size: 50px;
   }
 
-  span {
-    display: inline-block;
+  .typing {
+    position: relative;
     color: rgb(0, 157, 255);
     font-family: CedarvilleCursive;
     font-size: 80px;
     font-style: italic;
-    transition: 0.75s;
   }
 
-  span:hover {
-    transform: rotateX(180deg) translateY(-50%);
+  .typing::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60%;
+    top: 20%;
+    right: -8px;
+    border-right: 2px solid white;
+    animation: blink 0.75s infinite ease;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -121,10 +137,6 @@ header {
         font-size: 80px;
         font-style: italic;
         transition: 0.75s;
-      }
-
-      span:hover {
-        transform: rotateX(-180deg) translateY(50%);
       }
     }
 
