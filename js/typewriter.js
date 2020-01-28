@@ -1,8 +1,8 @@
-const text = ["Fun", "Minimal", "Boring"];
+const text = ['Fun', 'Cringeworthy', 'Colourful'];
 let index = 0;
 let count = 0;
-let currentText = "";
-let letter = "";
+let currentText = '';
+let letter = '';
 
 (function type() {
   if (index === text.length) {
@@ -11,11 +11,11 @@ let letter = "";
   currentText = text[index];
   letter = currentText.slice(0, ++count);
 
-  document.querySelector(".typing").textContent = letter;
+  document.querySelector('.typing').textContent = letter;
   if (letter.length === currentText.length) {
     index++;
     count = 0;
   }
 
-  setTimeout(type, 600);
+  setTimeout(type, 400);
 })();

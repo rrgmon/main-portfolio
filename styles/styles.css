@@ -36,6 +36,7 @@ body {
   background: #181818;
   color: white;
   width: 90%;
+  height: 100%;
   margin: auto;
 }
 
@@ -101,7 +102,7 @@ header nav .nav-list .nav-links:hover {
 }
 
 .home-container .typing::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 1px;
   height: 60%;
@@ -132,7 +133,7 @@ header nav .nav-list .nav-links:hover {
 
 .about-container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,5 +190,151 @@ header nav .nav-list .nav-links:hover {
   width: 50%;
   height: 60%;
   margin: 2em;
+}
+
+.project-container {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-container .card-container {
+  width: 320px;
+  height: 420px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.project-container .card-container .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.project-container .card-container .card .front,
+.project-container .card-container .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  background: #2b2b2b;
+  z-index: 10;
+}
+
+.project-container .card-container .card .front .front-title {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.project-container .card-container .card .front .front-title h1 {
+  font-size: 40px;
+  color: #eeeeee;
+}
+
+.project-container .card-container .card .front .lang-used {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.project-container .card-container .card .front .lang-used ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  color: gray;
+}
+
+.project-container .card-container .card .front .lang-used ul li {
+  padding: 0 10px;
+}
+
+.project-container .card-container .card .front .lang-used ul li:not(:last-child) {
+  border-right: 1px solid #5bff5b;
+}
+
+.project-container .card-container .card .front .triangle {
+  background-image: -webkit-gradient(linear, left top, right top, from(#18a346), to(#19c962));
+  background-image: linear-gradient(to right, #18a346 0%, #19c962 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 60%);
+          clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 60%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.project-container .card-container .card .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  text-align: justify;
+}
+
+.project-container .card-container .card .back p {
+  font-size: 20px;
+  padding: 1em;
+}
+
+.project-container .card-container .card .back a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid #5bff5b;
+}
+
+.project-container .card-container .card .back a:hover {
+  background-color: #5bff5b;
+  color: black;
+}
+
+.project-container .card-container:hover .card {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 /*# sourceMappingURL=styles.css.map */

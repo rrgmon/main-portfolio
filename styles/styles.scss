@@ -1,22 +1,25 @@
 @font-face {
   font-family: PoppinsLight;
-  src: url("../fonts/Poppins-Light.ttf");
+  src: url('../fonts/Poppins-Light.ttf');
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url("../fonts/Poppins-Regular.ttf");
+  src: url('../fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: CedarvilleCursive;
-  src: url("../fonts/CedarvilleCursive-Regular.ttf");
+  src: url('../fonts/CedarvilleCursive-Regular.ttf');
 }
 
 @font-face {
   font-family: Kalimata;
-  src: url("../fonts/KallimataScript.ttf");
+  src: url('../fonts/KallimataScript.ttf');
 }
+
+$primaryclr: rgb(24, 24, 24);
+$navfontclr: rgb(128, 128, 128);
 
 *,
 *::before,
@@ -32,10 +35,11 @@ html {
 
 body {
   font-family: PoppinsLight;
-  background: rgb(24, 24, 24);
+  background: $primaryclr;
   color: white;
 
   width: 90%;
+  height: 100%;
   margin: auto;
 }
 
@@ -61,7 +65,7 @@ header {
       .nav-links {
         margin: 2em;
         text-decoration: none;
-        color: rgb(128, 128, 128);
+        color: $navfontclr;
       }
 
       .nav-links:hover {
@@ -77,6 +81,8 @@ header {
   height: 90vh;
   place-items: center;
 
+  // background-color: lightcoral;
+
   h1 {
     font-size: 50px;
   }
@@ -90,7 +96,7 @@ header {
   }
 
   .typing::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 1px;
     height: 60%;
@@ -113,11 +119,13 @@ header {
 
 .about-container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  // background: lightblue;
 
   .about-text {
     width: 50%;
@@ -159,5 +167,122 @@ header {
     width: 50%;
     height: 60%;
     margin: 2em;
+  }
+}
+
+.project-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .card-container {
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 1em;
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+
+      .front,
+      .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1em;
+
+        background: rgb(43, 43, 43);
+        z-index: 10;
+      }
+
+      .front {
+        .front-title {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-items: center;
+
+          h1 {
+            font-size: 40px;
+            color: rgb(238, 238, 238);
+          }
+        }
+
+        .lang-used {
+          width: 100%;
+          height: 100%;
+
+          display: grid;
+          place-items: center;
+          ul {
+            list-style: none;
+
+            display: inline-flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            font-size: 25px;
+            color: $navfontclr;
+            li {
+              padding: 0 10px;
+            }
+
+            li:not(:last-child) {
+              border-right: 1px solid rgb(91, 255, 91);
+            }
+          }
+        }
+
+        .triangle {
+          background-image: linear-gradient(to right, #18a346 0%, #19c962 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 60%);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+
+      .back {
+        transform: rotateY(180deg);
+        text-align: justify;
+
+        p {
+          font-size: 20px;
+          padding: 1em;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 10px 15px;
+          border: 1px solid rgb(91, 255, 91);
+        }
+
+        a:hover {
+          background-color: rgb(91, 255, 91);
+          color: black;
+        }
+      }
+    }
+  }
+
+  .card-container:hover .card {
+    transform: rotateY(-180deg);
   }
 }
