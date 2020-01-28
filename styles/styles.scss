@@ -55,8 +55,10 @@ header {
     height: 10vh;
 
     .logo {
-      width: 200px;
-      height: 200px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
     }
 
     .nav-list {
@@ -71,6 +73,24 @@ header {
 
       .nav-links:hover {
         color: rgb(255, 255, 255);
+      }
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 1.5em;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+
+      .bar {
+        height: 3px;
+        width: 100%;
+        background-color: $navfontclr;
+        border-radius: 10px;
       }
     }
   }
@@ -310,9 +330,94 @@ header {
   }
 }
 
+// ******************** Responsive ********************
+
 @media (max-width: 1048px) {
   .about-container {
     .about-text {
+      width: 100%;
+      h1 {
+        font-size: 50px;
+
+        span {
+          font-size: 70px;
+        }
+      }
+      p {
+        font-size: 18px;
+
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+    .about-img {
+      display: none;
+    }
+  }
+
+  .project-container {
+    .card-container {
+      width: 280px;
+      height: 380px;
+
+      .card {
+        .front {
+          .front-title {
+            h1 {
+              font-size: 35px;
+            }
+          }
+          .lang-used {
+            ul {
+              font-size: 20px;
+            }
+          }
+        }
+        .back {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .logo {
+        background-color: pink;
+        height: 100px;
+      }
+
+      .toggle-button {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+      }
+
+      .nav-list {
+        width: 100%;
+        flex-direction: column;
+
+        li {
+          text-align: center;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  .about-container {
+    .about-text {
+      width: 100%;
       h1 {
         font-size: 40px;
 
@@ -321,15 +426,12 @@ header {
         }
       }
       p {
-        font-size: 16px;
+        font-size: 18px;
 
         span {
           font-size: 30px;
         }
       }
-    }
-    .about-img {
-      width: 40%;
     }
   }
 
@@ -342,7 +444,7 @@ header {
         .front {
           .front-title {
             h1 {
-              font-size: 30px;
+              font-size: 25px;
             }
           }
           .lang-used {
@@ -353,7 +455,7 @@ header {
         }
         .back {
           p {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -361,13 +463,19 @@ header {
   }
 }
 
-@media (max-width: 900px) {
-  .about-container {
-    .about-text {
-      width: 100%;
-    }
-    .about-img {
-      display: none;
+@media (max-width: 620px) {
+  .home-container {
+    .home-text {
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 30px;
+        .typing {
+          font-size: 30px;
+        }
+      }
     }
   }
 }

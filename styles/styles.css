@@ -61,7 +61,7 @@ header nav {
   height: 10vh;
 }
 
-header nav .logo {
+header nav .logo img {
   width: 200px;
   height: 200px;
 }
@@ -81,6 +81,29 @@ header nav .nav-list .nav-links {
 
 header nav .nav-list .nav-links:hover {
   color: white;
+}
+
+header nav .toggle-button {
+  position: absolute;
+  top: 1.5em;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+header nav .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: gray;
+  border-radius: 10px;
 }
 
 .home-container {
@@ -369,6 +392,76 @@ header nav .nav-list .nav-links:hover {
 }
 
 @media (max-width: 1048px) {
+  .about-container .about-text {
+    width: 100%;
+  }
+  .about-container .about-text h1 {
+    font-size: 50px;
+  }
+  .about-container .about-text h1 span {
+    font-size: 70px;
+  }
+  .about-container .about-text p {
+    font-size: 18px;
+  }
+  .about-container .about-text p span {
+    font-size: 40px;
+  }
+  .about-container .about-img {
+    display: none;
+  }
+  .project-container .card-container {
+    width: 280px;
+    height: 380px;
+  }
+  .project-container .card-container .card .front .front-title h1 {
+    font-size: 35px;
+  }
+  .project-container .card-container .card .front .lang-used ul {
+    font-size: 20px;
+  }
+  .project-container .card-container .card .back p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav .logo {
+    background-color: pink;
+    height: 100px;
+  }
+  header nav .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .nav-links {
+    display: none;
+    width: 100%;
+  }
+  header nav .nav-list {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .nav-list li {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .about-container .about-text {
+    width: 100%;
+  }
   .about-container .about-text h1 {
     font-size: 40px;
   }
@@ -376,35 +469,35 @@ header nav .nav-list .nav-links:hover {
     font-size: 60px;
   }
   .about-container .about-text p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .about-container .about-text p span {
     font-size: 30px;
-  }
-  .about-container .about-img {
-    width: 40%;
   }
   .project-container .card-container {
     width: 220px;
     height: 320px;
   }
   .project-container .card-container .card .front .front-title h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .project-container .card-container .card .front .lang-used ul {
     font-size: 16px;
   }
   .project-container .card-container .card .back p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 900px) {
-  .about-container .about-text {
-    width: 100%;
+@media (max-width: 620px) {
+  .home-container .home-text h1 {
+    font-size: 40px;
   }
-  .about-container .about-img {
-    display: none;
+  .home-container .home-text h2 {
+    font-size: 30px;
+  }
+  .home-container .home-text h2 .typing {
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
