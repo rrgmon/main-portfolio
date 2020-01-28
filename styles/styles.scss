@@ -27,6 +27,7 @@ $navfontclr: rgb(128, 128, 128);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 html {
@@ -38,7 +39,7 @@ body {
   background: $primaryclr;
   color: white;
 
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: auto;
 }
@@ -77,21 +78,38 @@ header {
 
 .home-container {
   display: grid;
-  width: 100%;
+  width: 90%;
+  min-height: 90vh;
   height: 90vh;
+  margin: auto;
   place-items: center;
 
   // background-color: lightcoral;
 
-  h1 {
-    font-size: 50px;
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 50px;
+      color: $navfontclr;
+    }
   }
 
   .typing {
     position: relative;
     color: rgb(0, 157, 255);
     font-family: CedarvilleCursive;
-    font-size: 80px;
+    font-size: 50px;
     font-style: italic;
   }
 
@@ -118,8 +136,10 @@ header {
 }
 
 .about-container {
-  width: 100%;
+  width: 90%;
+  min-height: 100vh;
   height: 100vh;
+  margin: auto;
 
   display: flex;
   justify-content: space-between;
@@ -164,19 +184,22 @@ header {
   }
 
   .about-img {
-    width: 50%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     margin: 2em;
   }
 }
 
 .project-container {
-  width: 100%;
+  width: 90%;
   min-height: 100vh;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+
+  // background-color: lightyellow;
 
   .card-container {
     width: 320px;
@@ -284,5 +307,67 @@ header {
 
   .card-container:hover .card {
     transform: rotateY(-180deg);
+  }
+}
+
+@media (max-width: 1048px) {
+  .about-container {
+    .about-text {
+      h1 {
+        font-size: 40px;
+
+        span {
+          font-size: 60px;
+        }
+      }
+      p {
+        font-size: 16px;
+
+        span {
+          font-size: 30px;
+        }
+      }
+    }
+    .about-img {
+      width: 40%;
+    }
+  }
+
+  .project-container {
+    .card-container {
+      width: 220px;
+      height: 320px;
+
+      .card {
+        .front {
+          .front-title {
+            h1 {
+              font-size: 30px;
+            }
+          }
+          .lang-used {
+            ul {
+              font-size: 16px;
+            }
+          }
+        }
+        .back {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    .about-text {
+      width: 100%;
+    }
+    .about-img {
+      display: none;
+    }
   }
 }

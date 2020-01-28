@@ -1,4 +1,4 @@
-const text = ['Fun', 'Cringeworthy', 'Colourful'];
+const text = ['Websites', 'Music', 'Sketches', 'Terrible Jokes'];
 let index = 0;
 let count = 0;
 let currentText = '';
@@ -17,5 +17,5 @@ let letter = '';
     count = 0;
   }
 
-  setTimeout(type, 400);
+  setTimeout(type, 350);
 })();
