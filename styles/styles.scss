@@ -1,21 +1,21 @@
 @font-face {
   font-family: PoppinsLight;
-  src: url('../fonts/Poppins-Light.ttf');
+  src: url("../fonts/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url('../fonts/Poppins-Regular.ttf');
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: CedarvilleCursive;
-  src: url('../fonts/CedarvilleCursive-Regular.ttf');
+  src: url("../fonts/CedarvilleCursive-Regular.ttf");
 }
 
 @font-face {
   font-family: Kalimata;
-  src: url('../fonts/KallimataScript.ttf');
+  src: url("../fonts/KallimataScript.ttf");
 }
 
 $primaryclr: rgb(24, 24, 24);
@@ -78,7 +78,7 @@ header {
 
     .toggle-button {
       position: absolute;
-      top: 1.5em;
+      top: 1.75em;
       right: 1rem;
       display: none;
       flex-direction: column;
@@ -134,7 +134,7 @@ header {
   }
 
   .typing::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 1px;
     height: 60%;
@@ -391,8 +391,13 @@ header {
       align-items: flex-start;
 
       .logo {
-        background-color: pink;
-        height: 100px;
+        img {
+          position: absolute;
+          top: 0;
+          height: 80px;
+          width: 120px;
+          // background: lightblue;
+        }
       }
 
       .toggle-button {
@@ -474,6 +479,68 @@ header {
         font-size: 30px;
         .typing {
           font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .home-container {
+    .home-text {
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 20px;
+
+        .typing {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .about-container {
+    .about-text {
+      h1 {
+        font-size: 30px;
+        span {
+          font-size: 30px;
+        }
+      }
+      p {
+        font-size: 14px;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .project-container {
+    .card-container {
+      width: 180px;
+      height: 280px;
+      .card {
+        .front {
+          .front-title {
+            h1 {
+              font-size: 20px;
+            }
+          }
+
+          .lang-used {
+            ul {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .back {
+          p {
+            font-size: 12px;
+          }
         }
       }
     }

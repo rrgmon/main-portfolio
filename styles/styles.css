@@ -85,7 +85,7 @@ header nav .nav-list .nav-links:hover {
 
 header nav .toggle-button {
   position: absolute;
-  top: 1.5em;
+  top: 1.75em;
   right: 1rem;
   display: none;
   -webkit-box-orient: vertical;
@@ -152,7 +152,7 @@ header nav .toggle-button .bar {
 }
 
 .home-container .typing::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 60%;
@@ -435,9 +435,11 @@ header nav .toggle-button .bar {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  header nav .logo {
-    background-color: pink;
-    height: 100px;
+  header nav .logo img {
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 120px;
   }
   header nav .toggle-button {
     display: -webkit-box;
@@ -498,6 +500,43 @@ header nav .toggle-button .bar {
   }
   .home-container .home-text h2 .typing {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .home-container .home-text h1 {
+    font-size: 30px;
+  }
+  .home-container .home-text h2 {
+    font-size: 20px;
+  }
+  .home-container .home-text h2 .typing {
+    font-size: 25px;
+  }
+  .about-container .about-text h1 {
+    font-size: 30px;
+  }
+  .about-container .about-text h1 span {
+    font-size: 30px;
+  }
+  .about-container .about-text p {
+    font-size: 14px;
+  }
+  .about-container .about-text p span {
+    font-size: 20px;
+  }
+  .project-container .card-container {
+    width: 180px;
+    height: 280px;
+  }
+  .project-container .card-container .card .front .front-title h1 {
+    font-size: 20px;
+  }
+  .project-container .card-container .card .front .lang-used ul {
+    font-size: 12px;
+  }
+  .project-container .card-container .card .back p {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
