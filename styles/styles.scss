@@ -1,21 +1,21 @@
 @font-face {
   font-family: PoppinsLight;
-  src: url('../fonts/Poppins-Light.ttf');
+  src: url("../fonts/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url('../fonts/Poppins-Regular.ttf');
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: CedarvilleCursive;
-  src: url('../fonts/CedarvilleCursive-Regular.ttf');
+  src: url("../fonts/CedarvilleCursive-Regular.ttf");
 }
 
 @font-face {
   font-family: Kalimata;
-  src: url('../fonts/KallimataScript.ttf');
+  src: url("../fonts/KallimataScript.ttf");
 }
 
 $primaryclr: rgb(24, 24, 24);
@@ -55,13 +55,17 @@ header {
     height: 10vh;
 
     .logo {
-      width: 200px;
-      height: 200px;
+      // background-color: lightskyblue;
+      margin-left: 2em;
+      font-family: Kalimata;
+      font-size: 25px;
     }
 
     .nav-list {
-      display: flex;
-      list-style: none;
+      ul {
+        display: flex;
+        list-style: none;
+      }
 
       .nav-links {
         margin: 2em;
@@ -71,6 +75,24 @@ header {
 
       .nav-links:hover {
         color: rgb(255, 255, 255);
+      }
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 1.75em;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+
+      .bar {
+        height: 3px;
+        width: 100%;
+        background-color: $navfontclr;
+        border-radius: 10px;
       }
     }
   }
@@ -114,7 +136,7 @@ header {
   }
 
   .typing::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 1px;
     height: 60%;
@@ -310,9 +332,99 @@ header {
   }
 }
 
+// ******************** Responsive ********************
+
 @media (max-width: 1048px) {
   .about-container {
     .about-text {
+      width: 100%;
+      h1 {
+        font-size: 50px;
+
+        span {
+          font-size: 70px;
+        }
+      }
+      p {
+        font-size: 18px;
+
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+    .about-img {
+      display: none;
+    }
+  }
+
+  .project-container {
+    .card-container {
+      width: 280px;
+      height: 380px;
+
+      .card {
+        .front {
+          .front-title {
+            h1 {
+              font-size: 35px;
+            }
+          }
+          .lang-used {
+            ul {
+              font-size: 20px;
+            }
+          }
+        }
+        .back {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .logo {
+        margin: 0.5em 0 0 1em;
+        font-size: 20px;
+      }
+
+      .toggle-button {
+        display: flex;
+      }
+
+      .nav-list {
+        display: none;
+        width: 100%;
+      }
+
+      .nav-list {
+        ul {
+          width: 100%;
+          flex-direction: column;
+          li {
+            text-align: center;
+            padding: 0.4rem;
+          }
+        }
+      }
+
+      .nav-list.active {
+        display: flex;
+      }
+    }
+  }
+  .about-container {
+    .about-text {
+      width: 100%;
       h1 {
         font-size: 40px;
 
@@ -321,15 +433,12 @@ header {
         }
       }
       p {
-        font-size: 16px;
+        font-size: 18px;
 
         span {
           font-size: 30px;
         }
       }
-    }
-    .about-img {
-      width: 40%;
     }
   }
 
@@ -342,7 +451,7 @@ header {
         .front {
           .front-title {
             h1 {
-              font-size: 30px;
+              font-size: 25px;
             }
           }
           .lang-used {
@@ -353,7 +462,7 @@ header {
         }
         .back {
           p {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -361,13 +470,99 @@ header {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 620px) {
+  header {
+    nav {
+      .logo {
+        font-size: 10px;
+        margin: 2.5em 0 0 2em;
+      }
+    }
+  }
+
+  .home-container {
+    .home-text {
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 30px;
+        .typing {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  header {
+    nav {
+      .logo {
+        font-size: 10px;
+        margin: 2.5em 0 0 2em;
+      }
+    }
+  }
+
+  .home-container {
+    .home-text {
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 20px;
+
+        .typing {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
   .about-container {
     .about-text {
-      width: 100%;
+      h1 {
+        font-size: 30px;
+        span {
+          font-size: 30px;
+        }
+      }
+      p {
+        font-size: 14px;
+        span {
+          font-size: 20px;
+        }
+      }
     }
-    .about-img {
-      display: none;
+  }
+
+  .project-container {
+    .card-container {
+      width: 180px;
+      height: 280px;
+      .card {
+        .front {
+          .front-title {
+            h1 {
+              font-size: 20px;
+            }
+          }
+
+          .lang-used {
+            ul {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .back {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }

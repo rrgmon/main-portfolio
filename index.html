@@ -10,16 +10,23 @@
   <body>
     <header>
       <nav>
-        <a href="#"
-          ><img class="logo" src="./img/rrgmon_logo.svg" alt="logo"
-        /></a>
+        <div class="logo">
+          <h1>RRGMON</h1>
+        </div>
 
-        <ul class="nav-list">
-          <li><a class="nav-links" href="#">Home</a></li>
-          <li><a class="nav-links" href="#about">About</a></li>
-          <li><a class="nav-links" href="#project">Projects</a></li>
-          <li><a class="nav-links" href="#contact">Contact</a></li>
-        </ul>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="nav-list">
+          <ul>
+            <li><a class="nav-links" href="#">Home</a></li>
+            <li><a class="nav-links" href="#about">About</a></li>
+            <li><a class="nav-links" href="#project">Projects</a></li>
+            <li><a class="nav-links" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -88,6 +95,7 @@
       </section>
     </main>
 
+    <script src="./js/hamburger.js"></script>
     <script src="./js/typewriter.js"></script>
   </body>
 </html>
