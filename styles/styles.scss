@@ -45,8 +45,8 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
 
   nav {
     display: flex;
@@ -55,10 +55,9 @@ header {
     height: 10vh;
 
     .logo {
-      img {
-        width: 200px;
-        height: 200px;
-      }
+      width: 200px;
+      height: 100%;
+      margin: 2em 0 0 2em;
     }
 
     .nav-list {
@@ -390,22 +389,12 @@ header {
       flex-direction: column;
       align-items: flex-start;
 
-      .logo {
-        img {
-          position: absolute;
-          top: 0;
-          height: 80px;
-          width: 120px;
-          // background: lightblue;
-        }
-      }
-
       .toggle-button {
         display: flex;
       }
 
       .nav-links {
-        display: none;
+        // display: none;
         width: 100%;
       }
 

@@ -42,12 +42,6 @@ body {
   margin: auto;
 }
 
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,9 +55,10 @@ header nav {
   height: 10vh;
 }
 
-header nav .logo img {
+header nav .logo {
   width: 200px;
-  height: 200px;
+  height: 100%;
+  margin: 2em 0 0 2em;
 }
 
 header nav .nav-list {
@@ -435,19 +430,12 @@ header nav .toggle-button .bar {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  header nav .logo img {
-    position: absolute;
-    top: 0;
-    height: 80px;
-    width: 120px;
-  }
   header nav .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   header nav .nav-links {
-    display: none;
     width: 100%;
   }
   header nav .nav-list {
