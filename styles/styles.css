@@ -153,7 +153,7 @@ header nav .toggle-button .bar {
 }
 
 .home-container .typing::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 1px;
   height: 60%;
@@ -457,13 +457,40 @@ header nav .toggle-button .bar {
             flex-direction: column;
   }
   header nav .nav-list ul li {
-    text-align: center;
+    margin: 0.6rem 0 0 10rem;
+    text-align: right;
     padding: 0.4rem;
   }
   header nav .nav-list.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-animation: menu 1s ease;
+            animation: menu 1s ease;
+  }
+  @-webkit-keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
   }
   .about-container .about-text {
     width: 100%;
