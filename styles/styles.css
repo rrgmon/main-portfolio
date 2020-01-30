@@ -42,6 +42,12 @@ body {
   margin: auto;
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,12 +62,12 @@ header nav {
 }
 
 header nav .logo {
-  width: 200px;
-  height: 100%;
-  margin: 2em 0 0 2em;
+  margin-left: 2em;
+  font-family: Kalimata;
+  font-size: 25px;
 }
 
-header nav .nav-list {
+header nav .nav-list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,24 +436,34 @@ header nav .toggle-button .bar {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  header nav .logo {
+    margin: 0.5em 0 0 1em;
+    font-size: 20px;
+  }
   header nav .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header nav .nav-links {
+  header nav .nav-list {
+    display: none;
     width: 100%;
   }
-  header nav .nav-list {
+  header nav .nav-list ul {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header nav .nav-list li {
+  header nav .nav-list ul li {
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.4rem;
+  }
+  header nav .nav-list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .about-container .about-text {
     width: 100%;
@@ -480,6 +496,10 @@ header nav .toggle-button .bar {
 }
 
 @media (max-width: 620px) {
+  header nav .logo {
+    font-size: 10px;
+    margin: 2.5em 0 0 2em;
+  }
   .home-container .home-text h1 {
     font-size: 40px;
   }
@@ -492,6 +512,10 @@ header nav .toggle-button .bar {
 }
 
 @media (max-width: 340px) {
+  header nav .logo {
+    font-size: 10px;
+    margin: 2.5em 0 0 2em;
+  }
   .home-container .home-text h1 {
     font-size: 30px;
   }
