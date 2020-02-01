@@ -154,7 +154,7 @@ header nav .toggle-button .bar {
 }
 
 .home-container .typing::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 1px;
   height: 60%;
@@ -523,7 +523,6 @@ header nav .toggle-button .bar {
   .project-container .card-container {
     width: 220px;
     height: 320px;
-    z-index: -1;
   }
   .project-container .card-container .card .front .front-title h1 {
     font-size: 25px;
