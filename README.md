@@ -1,2 +1,3 @@
-# rrgmon.github.io
-Landing Page
+# Complete revamp of my portfolio
+
+_This is where I change my portfolio completely, since well, I like to keep **Experimenting** with new things._
