@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #252525;
+  font-family: 'Poppins';
+}
+
+nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+}
+
+nav .navbar .logo h1 {
+  color: white;
+}
+
+nav .navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+nav .navbar .menu .bar {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+}
+
+section#home {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 90vh;
+}
+
+section#home #home-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #001738;
+  -webkit-clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
+  clip-path: polygon(100% 30%, 100% 60%, 0 70%, 0 40%);
+  z-index: -1;
+}
+
+section#home .home-container {
+  color: white;
+  text-align: center;
+}
+
+section#home .home-container h1 {
+  font-size: 40px;
+}
+
+section#home .home-container h2 {
+  font-size: 30px;
+}
+
+section#home .home-container h2 span {
+  color: #407dd8;
+}
+/*# sourceMappingURL=main.css.map */
