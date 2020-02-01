@@ -150,10 +150,11 @@ header nav .toggle-button .bar {
   font-family: CedarvilleCursive;
   font-size: 50px;
   font-style: italic;
+  z-index: -1;
 }
 
 .home-container .typing::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 60%;
@@ -435,6 +436,8 @@ header nav .toggle-button .bar {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    z-index: 10;
+    background-color: rgba(24, 24, 24, 0.9);
   }
   header nav .logo {
     margin: 0.5em 0 0 1em;
@@ -449,8 +452,12 @@ header nav .toggle-button .bar {
     display: none;
     width: 100%;
   }
+  header nav .nav-list {
+    padding-top: 1.3rem;
+  }
   header nav .nav-list ul {
     width: 100%;
+    background-color: rgba(24, 24, 24, 0.9);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -459,12 +466,18 @@ header nav .toggle-button .bar {
   header nav .nav-list ul li {
     margin: 0.6rem 0 0 10rem;
     text-align: right;
-    padding: 0.4rem;
+  }
+  header nav .nav-list ul li:first-child {
+    padding-top: 0.4rem;
+  }
+  header nav .nav-list ul li a {
+    font-size: 12px;
   }
   header nav .nav-list.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 70%;
     -webkit-animation: menu 1s ease;
             animation: menu 1s ease;
   }
@@ -510,6 +523,7 @@ header nav .toggle-button .bar {
   .project-container .card-container {
     width: 220px;
     height: 320px;
+    z-index: -1;
   }
   .project-container .card-container .card .front .front-title h1 {
     font-size: 25px;
@@ -523,9 +537,82 @@ header nav .toggle-button .bar {
 }
 
 @media (max-width: 620px) {
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    z-index: 10;
+    background-color: rgba(24, 24, 24, 0.9);
+  }
   header nav .logo {
     font-size: 10px;
     margin: 2.5em 0 0 2em;
+  }
+  header nav .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .nav-list {
+    display: none;
+    width: 100%;
+  }
+  header nav .nav-list {
+    padding-top: 1.3rem;
+  }
+  header nav .nav-list ul {
+    width: 100%;
+    background-color: rgba(24, 24, 24, 0.9);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .nav-list ul li {
+    margin: 0.6rem 0 0 10rem;
+    text-align: right;
+  }
+  header nav .nav-list ul li:first-child {
+    padding-top: 0.4rem;
+  }
+  header nav .nav-list ul li a {
+    font-size: 12px;
+  }
+  header nav .nav-list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 70%;
+    -webkit-animation: menu 1s ease;
+            animation: menu 1s ease;
+  }
+  @-webkit-keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
   }
   .home-container .home-text h1 {
     font-size: 40px;
@@ -539,9 +626,82 @@ header nav .toggle-button .bar {
 }
 
 @media (max-width: 340px) {
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    z-index: 10;
+    background-color: rgba(24, 24, 24, 0.9);
+  }
   header nav .logo {
     font-size: 10px;
     margin: 2.5em 0 0 2em;
+  }
+  header nav .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .nav-list {
+    display: none;
+    width: 100%;
+  }
+  header nav .nav-list {
+    padding-top: 1.3rem;
+  }
+  header nav .nav-list ul {
+    width: 100%;
+    background-color: rgba(24, 24, 24, 0.9);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .nav-list ul li {
+    margin: 0.6rem 0 0 10rem;
+    text-align: right;
+  }
+  header nav .nav-list ul li:first-child {
+    padding-top: 0.4rem;
+  }
+  header nav .nav-list ul li a {
+    font-size: 12px;
+  }
+  header nav .nav-list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 70%;
+    -webkit-animation: menu 1s ease;
+            animation: menu 1s ease;
+  }
+  @-webkit-keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes menu {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
   }
   .home-container .home-text h1 {
     font-size: 30px;
@@ -553,7 +713,7 @@ header nav .toggle-button .bar {
     font-size: 25px;
   }
   .about-container .about-text h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .about-container .about-text h1 span {
     font-size: 30px;

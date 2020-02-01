@@ -1,21 +1,21 @@
 @font-face {
   font-family: PoppinsLight;
-  src: url('../fonts/Poppins-Light.ttf');
+  src: url("../fonts/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url('../fonts/Poppins-Regular.ttf');
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: CedarvilleCursive;
-  src: url('../fonts/CedarvilleCursive-Regular.ttf');
+  src: url("../fonts/CedarvilleCursive-Regular.ttf");
 }
 
 @font-face {
   font-family: Kalimata;
-  src: url('../fonts/KallimataScript.ttf');
+  src: url("../fonts/KallimataScript.ttf");
 }
 
 $primaryclr: rgb(24, 24, 24);
@@ -133,10 +133,11 @@ header {
     font-family: CedarvilleCursive;
     font-size: 50px;
     font-style: italic;
+    z-index: -1;
   }
 
   .typing::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 1px;
     height: 60%;
@@ -391,6 +392,8 @@ header {
     nav {
       flex-direction: column;
       align-items: flex-start;
+      z-index: 10;
+      background-color: rgba($primaryclr, $alpha: 0.9);
 
       .logo {
         margin: 0.5em 0 0 1em;
@@ -407,20 +410,30 @@ header {
       }
 
       .nav-list {
+        padding-top: 1.3rem;
         ul {
           width: 100%;
+
+          background-color: rgba($primaryclr, $alpha: 0.9);
           flex-direction: column;
 
           li {
             margin: 0.6rem 0 0 10rem;
             text-align: right;
-            padding: 0.4rem;
+
+            &:first-child {
+              padding-top: 0.4rem;
+            }
+            a {
+              font-size: 12px;
+            }
           }
         }
       }
 
       .nav-list.active {
         display: flex;
+        top: 70%;
         animation: menu 1s ease;
       }
 
@@ -461,6 +474,7 @@ header {
     .card-container {
       width: 220px;
       height: 320px;
+      z-index: -1;
 
       .card {
         .front {
@@ -488,9 +502,63 @@ header {
 @media (max-width: 620px) {
   header {
     nav {
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 10;
+      background-color: rgba($primaryclr, $alpha: 0.9);
+
       .logo {
         font-size: 10px;
         margin: 2.5em 0 0 2em;
+      }
+
+      .toggle-button {
+        display: flex;
+      }
+
+      .nav-list {
+        display: none;
+        width: 100%;
+      }
+
+      .nav-list {
+        padding-top: 1.3rem;
+        ul {
+          width: 100%;
+
+          background-color: rgba($primaryclr, $alpha: 0.9);
+          flex-direction: column;
+
+          li {
+            margin: 0.6rem 0 0 10rem;
+            text-align: right;
+
+            &:first-child {
+              padding-top: 0.4rem;
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .nav-list.active {
+        display: flex;
+        top: 70%;
+        animation: menu 1s ease;
+      }
+
+      @keyframes menu {
+        from {
+          opacity: 0;
+          transform: translateY(-15%);
+        }
+
+        to {
+          transform: translateY(0%);
+          opacity: 1;
+        }
       }
     }
   }
@@ -514,9 +582,63 @@ header {
 @media (max-width: 340px) {
   header {
     nav {
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 10;
+      background-color: rgba($primaryclr, $alpha: 0.9);
+
       .logo {
         font-size: 10px;
         margin: 2.5em 0 0 2em;
+      }
+
+      .toggle-button {
+        display: flex;
+      }
+
+      .nav-list {
+        display: none;
+        width: 100%;
+      }
+
+      .nav-list {
+        padding-top: 1.3rem;
+        ul {
+          width: 100%;
+
+          background-color: rgba($primaryclr, $alpha: 0.9);
+          flex-direction: column;
+
+          li {
+            margin: 0.6rem 0 0 10rem;
+            text-align: right;
+
+            &:first-child {
+              padding-top: 0.4rem;
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .nav-list.active {
+        display: flex;
+        top: 70%;
+        animation: menu 1s ease;
+      }
+
+      @keyframes menu {
+        from {
+          opacity: 0;
+          transform: translateY(-15%);
+        }
+
+        to {
+          transform: translateY(0%);
+          opacity: 1;
+        }
       }
     }
   }
@@ -539,7 +661,7 @@ header {
   .about-container {
     .about-text {
       h1 {
-        font-size: 30px;
+        font-size: 20px;
         span {
           font-size: 30px;
         }
