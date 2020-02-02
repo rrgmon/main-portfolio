@@ -86,45 +86,74 @@ section#home {
     text-align: center;
     h1 {
       font-size: 40px;
-      animation: home-h1 1s linear;
+      animation: home-h1 1s ease;
 
       @include desktop {
-        font-size: 50px;
+        font-size: 80px;
+      }
+
+      @keyframes home-h1 {
+        from {
+          opacity: 0;
+          transform: translateY(-150%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
       }
     }
     h2 {
       font-size: 30px;
-      animation: home-h2 1s linear;
+      animation: home-h2 1s ease;
       color: fontcolor(paragraph);
-      span {
+
+      @keyframes home-h2 {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      .typing {
+        position: relative;
         color: fontcolor(home-span);
+        font-family: CedarvilleCursive;
+        top: 10%;
+        font-size: 35px;
+        font-style: italic;
+
+        @include desktop {
+          top: 0;
+          font-size: 50px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 90%;
+          right: -8px;
+          border-right: 2px solid white;
+          animation: blink 0.75s infinite ease;
+
+          @keyframes blink {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+        }
       }
 
       @include desktop {
         font-size: 40px;
-      }
-    }
-    @keyframes home-h1 {
-      from {
-        opacity: 0;
-        transform: translateY(-150%);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0%);
-      }
-    }
-
-    @keyframes home-h2 {
-      from {
-        opacity: 0;
-        transform: translateY(150%);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0%);
       }
     }
   }
