@@ -9,7 +9,8 @@ $font-colors: (
   home-span: #407dd8,
   about-span: #ff8a00,
   paragraph: lighten(black, 60%),
-  project-card: #aa1e1e
+  project-card: #aa1e1e,
+  contact-email: rgb(0, 184, 0)
 );
 
 @function color($color-name) {

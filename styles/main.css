@@ -83,8 +83,25 @@ header nav .navbar .nav-list li .nav-links {
   color: #999999;
 }
 
+header nav .navbar .nav-list li .nav-links::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #999999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 header nav .navbar .nav-list li .nav-links:hover {
   color: white;
+}
+
+header nav .navbar .nav-list li .nav-links:hover::after {
+  width: 100%;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (min-width: 900px) {
@@ -419,8 +436,8 @@ section#about #about-bg1 {
   width: 100%;
   height: 100%;
   background-color: #502d04;
-  -webkit-clip-path: polygon(100% 32%, 100% 52%, 0 52%, 0 32%);
-  clip-path: polygon(100% 32%, 100% 52%, 0 52%, 0 32%);
+  -webkit-clip-path: polygon(100% 32%, 100% 54%, 0 54%, 0 32%);
+  clip-path: polygon(100% 32%, 100% 54%, 0 54%, 0 32%);
   z-index: -1;
   -webkit-animation: about-bg1 1s ease;
           animation: about-bg1 1s ease;
@@ -451,7 +468,7 @@ section#about #about-bg1 {
 @media (min-width: 900px) {
   section#about #about-bg1 {
     -webkit-clip-path: polygon(100% 0, 100% 20%, 60% 20%, 60% 0);
-            clip-path: polygon(100% 0, 100% 20%, 60% 20%, 60% 0);
+    clip-path: polygon(100% 0, 100% 20%, 60% 20%, 60% 0);
   }
 }
 
@@ -460,8 +477,8 @@ section#about #about-bg2 {
   width: 100%;
   height: 100%;
   background-color: #502d04;
-  -webkit-clip-path: polygon(100% 52%, 100% 72%, 0 72%, 0 52%);
-  clip-path: polygon(100% 52%, 100% 72%, 0 72%, 0 52%);
+  -webkit-clip-path: polygon(100% 54%, 100% 72%, 0 72%, 0 54%);
+  clip-path: polygon(100% 54%, 100% 72%, 0 72%, 0 54%);
   z-index: -1;
   -webkit-animation: about-bg2 1s ease;
           animation: about-bg2 1s ease;
@@ -492,7 +509,7 @@ section#about #about-bg2 {
 @media (min-width: 900px) {
   section#about #about-bg2 {
     -webkit-clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
-            clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
+    clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
     -webkit-animation: about-bg2 1s ease;
             animation: about-bg2 1s ease;
   }
@@ -916,6 +933,169 @@ section#projects .project-container .card:hover .cardclip {
   }
 }
 
+section#contact {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+section#contact .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  section#contact .contact-container {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+}
+
+section#contact .contact-container .contact-info {
+  margin: 2em 0;
+}
+
+section#contact .contact-container .contact-info h1 {
+  display: none;
+}
+
+section#contact .contact-container .contact-info .email-btn {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #00b800;
+  border: 1px solid #00b800;
+}
+
+section#contact .contact-container .contact-info .email-btn .emailclip {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00b800;
+  color: white;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+section#contact .contact-container .contact-info .email-btn:hover .emailclip {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (min-width: 900px) {
+  section#contact .contact-container .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  section#contact .contact-container .contact-info h1 {
+    display: block;
+    font-size: 60px;
+    margin: 1em 0;
+  }
+  section#contact .contact-container .contact-info .email-btn {
+    padding: 20px 30px;
+    font-size: 20px;
+  }
+}
+
+section#contact .contact-container .contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0;
+}
+
+section#contact .contact-container .contact-links span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#contact .contact-container .contact-links span img {
+  padding: 0 2em;
+}
+
+section#contact .contact-container .contact-links span h1 {
+  font-size: 12px;
+}
+
+section#contact .contact-container .contact-links span h1::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  -webkit-transform: width 0.3s;
+          transform: width 0.3s;
+  background-color: #999999;
+}
+
+section#contact .contact-container .contact-links span:hover h1::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+@media (min-width: 900px) {
+  section#contact .contact-container .contact-links {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 @font-face {
   font-family: 'Poppins';
   src: url("../fonts/Poppins-Regular.ttf");
@@ -939,6 +1119,8 @@ section#projects .project-container .card:hover .cardclip {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body {

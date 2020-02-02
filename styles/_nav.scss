@@ -55,8 +55,22 @@ header {
             text-decoration: none;
             color: fontcolor(paragraph);
 
+            &::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background-color: fontcolor(paragraph);
+              transition: all 0.5s;
+            }
+
             &:hover {
               color: white;
+              &::after {
+                width: 100%;
+                background-color: white;
+                transition: all 0.5s;
+              }
             }
           }
         }
