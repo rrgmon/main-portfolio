@@ -121,14 +121,14 @@ section#home {
       .typing {
         position: relative;
         color: fontcolor(home-span);
-        font-family: CedarvilleCursive;
+        font-family: CedarCursive;
         top: 10%;
         font-size: 35px;
         font-style: italic;
 
         @include desktop {
           top: 0;
-          font-size: 50px;
+          font-size: 80px;
         }
 
         &::after {
@@ -153,7 +153,7 @@ section#home {
       }
 
       @include desktop {
-        font-size: 40px;
+        font-size: 50px;
       }
     }
   }
