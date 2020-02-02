@@ -1,6 +1,7 @@
 header {
   z-index: 10;
-
+  position: sticky;
+  top: 0;
   nav {
     .navbar {
       display: flex;
@@ -13,6 +14,11 @@ header {
         img {
           width: 100px;
           height: 100px;
+        }
+
+        @include desktop {
+          width: 100%;
+          margin: 0 1em;
         }
       }
 
@@ -33,32 +39,40 @@ header {
       }
 
       .nav-list {
+        position: absolute;
         display: none;
-      }
-    }
-
-    @include desktop {
-      .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 90%;
+        top: 80%;
 
-        .logo {
-          margin: 0 1em;
-        }
+        li {
+          list-style: none;
+          padding: 0.4em 2em;
 
-        .menu {
-          display: none;
-          .bar {
-            display: none;
+          .nav-links {
+            text-decoration: none;
+            color: fontcolor(paragraph);
+
+            &:hover {
+              color: white;
+            }
           }
         }
 
-        .nav-list {
+        @include desktop {
           display: flex;
+          position: relative;
+          flex-direction: row;
           justify-content: space-evenly;
+          align-items: center;
+          width: 30%;
+          top: 0;
+          margin: 0 1em;
 
           li {
             list-style: none;
-            padding: 0 2em;
 
             .nav-links {
               text-decoration: none;
@@ -68,6 +82,22 @@ header {
                 color: white;
               }
             }
+          }
+        }
+      }
+
+      .nav-list.active {
+        display: flex;
+      }
+    }
+
+    @include desktop {
+      .navbar {
+        width: 90%;
+        .menu {
+          display: none;
+          .bar {
+            display: none;
           }
         }
       }

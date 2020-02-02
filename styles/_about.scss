@@ -121,13 +121,11 @@ section#about {
     @include desktop {
       display: grid;
       grid-template-columns: 50% auto;
-      grid-template-areas: 'text image';
       margin: 1em;
       position: relative;
 
       .about-text {
         margin: 1em;
-        grid-area: 'text';
         height: fit-content;
         align-self: center;
         padding: 0 1em;
@@ -170,7 +168,6 @@ section#about {
       }
 
       .about-img {
-        grid-area: 'image';
         display: block;
         height: fit-content;
         align-self: center;
