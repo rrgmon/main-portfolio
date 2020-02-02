@@ -61,7 +61,7 @@ section#projects {
         background-color: color(project-poly);
         width: 100%;
         height: 100%;
-        clip-path: circle(0% at 0% 100%);
+        clip-path: circle(0%);
         transition: clip-path 0.5s linear;
         left: 0;
 
