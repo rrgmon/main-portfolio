@@ -1,0 +1,113 @@
+section#contact {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    @include desktop {
+      display: grid;
+      place-content: center;
+    }
+
+    .contact-info {
+      margin: 2em 0;
+      h1 {
+        display: none;
+      }
+      .email-btn {
+        position: relative;
+        text-decoration: none;
+        padding: 10px 15px;
+        color: fontcolor(contact-email);
+        border: 1px solid fontcolor(contact-email);
+
+        .emailclip {
+          display: grid;
+          place-items: center;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: fontcolor(contact-email);
+          color: white;
+          transition: clip-path 0.5s ease;
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+        &:hover .emailclip {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        h1 {
+          display: block;
+          font-size: 60px;
+          margin: 1em 0;
+        }
+
+        .email-btn {
+          padding: 20px 30px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 2em 0;
+
+      span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          padding: 0 2em;
+        }
+
+        h1 {
+          font-size: 12px;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            transform: width 0.3s;
+            background-color: fontcolor(paragraph);
+          }
+        }
+
+        &:hover {
+          h1 {
+            &::after {
+              width: 100%;
+              transition: width 0.3s;
+            }
+          }
+        }
+      }
+
+      @include desktop {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

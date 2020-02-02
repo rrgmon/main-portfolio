@@ -3,6 +3,7 @@
 @import './home';
 @import './about';
 @import './projects';
+@import './contact';
 
 @font-face {
   font-family: 'Poppins';
@@ -26,6 +27,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: 1s;
 }
 
 body {
