@@ -1,0 +1,131 @@
+section#home {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+
+  @include desktop {
+    height: 100vh;
+  }
+
+  #home-bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: color(home-poly);
+
+    -webkit-clip-path: polygon(100% 30%, 100% 40%, 0 50%, 0 40%);
+    clip-path: polygon(100% 30%, 100% 44%, 0 54%, 0 40%);
+    z-index: -1;
+    animation: home-bg1 1s ease;
+
+    @keyframes home-bg1 {
+      from {
+        transform: translateY(15%) translateX(-150%);
+      }
+      to {
+        transform: translateY(0%) translateX(0);
+      }
+    }
+
+    @include desktop {
+      clip-path: polygon(100% 0, 40% 100%, 0 100%, 0 0);
+      background-color: color(primary);
+      animation: none;
+
+      .homeclip {
+        background-color: color(home-poly);
+        width: 100%;
+        height: 100%;
+        animation: homeclip 1s ease-out;
+
+        @keyframes homeclip {
+          from {
+            clip-path: circle(0% at -150% -150%);
+          }
+          to {
+            clip-path: circle(75%);
+          }
+        }
+      }
+      @keyframes home-bg1 {
+        from {
+          transform: translateX(-150%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  #home-bg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: color(home-poly);
+    -webkit-clip-path: polygon(100% 44%, 100% 60%, 0 70%, 0 54%);
+    clip-path: polygon(100% 44%, 100% 60%, 0 70%, 0 54%);
+    z-index: -1;
+    animation: home-bg2 1s ease;
+
+    @keyframes home-bg2 {
+      from {
+        transform: translateY(-15%) translateX(150%);
+      }
+      to {
+        transform: translateY(0%) translateX(0);
+      }
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .home-container {
+    text-align: center;
+    h1 {
+      font-size: 40px;
+      animation: home-h1 1s linear;
+
+      @include desktop {
+        font-size: 50px;
+      }
+    }
+    h2 {
+      font-size: 30px;
+      animation: home-h2 1s linear;
+      color: fontcolor(paragraph);
+      span {
+        color: fontcolor(home-span);
+      }
+
+      @include desktop {
+        font-size: 40px;
+      }
+    }
+    @keyframes home-h1 {
+      from {
+        opacity: 0;
+        transform: translateY(-150%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @keyframes home-h2 {
+      from {
+        opacity: 0;
+        transform: translateY(150%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  }
+}
