@@ -1,0 +1,194 @@
+section#about {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  #about-bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: color(about-poly);
+
+    -webkit-clip-path: polygon(100% 32%, 100% 52%, 0 52%, 0 32%);
+    clip-path: polygon(100% 32%, 100% 52%, 0 52%, 0 32%);
+
+    z-index: -1;
+
+    animation: about-bg1 1s ease;
+
+    @keyframes about-bg1 {
+      from {
+        transform: translateX(150%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    @include desktop {
+      clip-path: polygon(100% 0, 100% 20%, 60% 20%, 60% 0);
+    }
+  }
+
+  #about-bg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: color(about-poly);
+
+    -webkit-clip-path: polygon(100% 52%, 100% 72%, 0 72%, 0 52%);
+    clip-path: polygon(100% 52%, 100% 72%, 0 72%, 0 52%);
+
+    z-index: -1;
+    animation: about-bg2 1s ease;
+
+    @keyframes about-bg2 {
+      from {
+        transform: translateX(-150%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    @include desktop {
+      clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
+      animation: about-bg2 1s ease;
+
+      @keyframes about-bg2 {
+        from {
+          opacity: 0;
+          transform: translateY(50%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1em;
+
+    .about-text {
+      margin: 0 1em;
+      h1 {
+        font-size: 30px;
+        animation: text-left 1s ease;
+        span {
+          color: fontcolor(about-span);
+          font-size: 50px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        text-align: justify;
+        color: fontcolor(paragraph);
+        animation: text-right 1s ease;
+      }
+
+      @keyframes text-left {
+        from {
+          opacity: 0;
+          transform: translateX(-150%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes text-right {
+        from {
+          opacity: 0;
+          transform: translateX(150%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+    }
+
+    .about-img {
+      display: none;
+    }
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: 50% auto;
+      margin: 1em;
+      position: relative;
+
+      .about-text {
+        margin: 1em;
+        height: fit-content;
+        align-self: center;
+        padding: 0 1em;
+        animation: about-text 1s ease;
+
+        h1 {
+          font-size: 40px;
+          animation: about-texth1 1.5s ease;
+          span {
+            font-size: 50px;
+          }
+
+          @keyframes about-texth1 {
+            from {
+              opacity: 0;
+              transform: translateY(-150%);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0%);
+            }
+          }
+        }
+        p {
+          padding: 1em 0;
+          font-size: 18px;
+          animation: about-textp 1.5s ease;
+
+          @keyframes about-textp {
+            from {
+              opacity: 0;
+              transform: translateY(150%);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0%);
+            }
+          }
+        }
+      }
+
+      .about-img {
+        display: block;
+        height: fit-content;
+        align-self: center;
+        margin: 1em;
+        animation: about-img 1.5s ease;
+        img {
+          width: 500px;
+          height: 500px;
+        }
+
+        @keyframes about-img {
+          from {
+            opacity: 0;
+            transform: translateX(150%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+  }
+}

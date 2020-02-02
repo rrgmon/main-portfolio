@@ -1,0 +1,31 @@
+$colors: (
+  primary: #1d1d1d,
+  home-poly: #001738,
+  about-poly: #502d04,
+  project-poly: #370d0d
+);
+
+$font-colors: (
+  home-span: #407dd8,
+  about-span: #ff8a00,
+  paragraph: lighten(black, 60%),
+  project-card: #aa1e1e
+);
+
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+@function fontcolor($fontcolor-name) {
+  @return map-get($map: $font-colors, $key: $fontcolor-name);
+}
+
+// ************ Responsive ************
+
+$desktop: 900px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
