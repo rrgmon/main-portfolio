@@ -5,7 +5,17 @@ section#contact {
   width: 100%;
   position: relative;
 
+  .triangle1,
+  .triangle2 {
+    display: none;
+  }
+
   @include desktop {
+    .triangle1,
+    .triangle2 {
+      display: block;
+    }
+
     .triangle1 {
       position: absolute;
       z-index: -1;
