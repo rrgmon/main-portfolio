@@ -1,3 +1,5 @@
+@import './about-svg-animate';
+
 section#about {
   display: grid;
   place-items: center;
@@ -52,8 +54,8 @@ section#about {
       }
     }
     @include desktop {
-      -webkit-clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
-      clip-path: polygon(35% 35%, 35% 100%, 7% 100%, 7% 35%);
+      -webkit-clip-path: polygon(28.5% 35%, 28.5% 100%, 6% 100%, 6% 35%);
+      clip-path: polygon(28.5% 35%, 28.5% 100%, 6% 100%, 6% 35%);
       animation: about-bg2 1s ease;
 
       @keyframes about-bg2 {
@@ -176,7 +178,7 @@ section#about {
         margin: 1em;
         animation: about-img 1.5s ease;
         img {
-          width: 500px;
+          width: 600px;
           height: 500px;
         }
 
