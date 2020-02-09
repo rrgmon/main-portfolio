@@ -91,29 +91,10 @@ section#home {
     }
     @include desktop {
       svg {
-        width: 800px;
+        width: 500px;
       }
     }
-    h1 {
-      font-size: 40px;
-      animation: home-h1 1s ease;
 
-      @include desktop {
-        font-size: 80px;
-      }
-
-      @keyframes home-h1 {
-        from {
-          opacity: 0;
-          transform: translateY(-150%);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-    }
     h2 {
       font-size: 30px;
       animation: home-h2 1s ease;
@@ -138,7 +119,7 @@ section#home {
 
         @include desktop {
           top: 0;
-          font-size: 80px;
+          font-size: 50px;
         }
 
         &::after {
@@ -165,7 +146,7 @@ section#home {
       }
 
       @include desktop {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   }
