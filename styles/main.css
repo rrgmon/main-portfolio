@@ -84,7 +84,7 @@ header nav .navbar .nav-list li .nav-links {
 }
 
 header nav .navbar .nav-list li .nav-links::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
