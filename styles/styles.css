@@ -21,7 +21,7 @@ section {
   display: grid;
   place-items: center;
   background-color: #5c7aff;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section div {

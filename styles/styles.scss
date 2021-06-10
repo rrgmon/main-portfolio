@@ -19,7 +19,7 @@ section {
   display: grid;
   place-items: center;
   background-color: hsl(229, 100%, 68%);
-  height: 100vh;
+  min-height: 100vh;
   div {
     display: flex;
     flex-direction: column;
