@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  background-color: hsl(229, 100%, 68%);
+  height: 100vh;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 8rem;
+    }
+    img {
+      width: 50rem;
+    }
+  }
+}
