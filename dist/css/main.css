@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -36,7 +38,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -77,23 +79,38 @@ select {
   }
 }
 header {
-  min-height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1rem;
 }
 header a {
   text-decoration: none;
   color: #f5f5fa;
 }
+@media (min-width: 56rem) {
+  header {
+    min-height: 10vh;
+  }
+}
 
 .signature,
 .navigation {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .signature {
   font-size: 2rem;
+}
+@media (min-width: 46rem) {
+  .signature {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 56rem) {
+  .signature {
+    font-size: 4rem;
+  }
 }
 
 .navigation {
@@ -128,10 +145,25 @@ header a {
 
 .container {
   font-size: 3rem;
-  min-height: 80vh;
   letter-spacing: 0.2rem;
   line-height: 1.6;
-  padding: 0 2rem;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+@media (min-width: 36rem) {
+  .container {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 46rem) {
+  .container {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 56rem) {
+  .container {
+    font-size: 6rem;
+  }
 }
 
 .main-text p:nth-child(1) span:nth-child(1) {
@@ -149,8 +181,8 @@ header a {
 }
 
 footer {
-  min-height: 10vh;
-  padding: 0 2rem;
+  margin: 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -158,6 +190,14 @@ footer {
 footer a {
   text-decoration: none;
   color: #f5f5fa;
+}
+@media (min-width: 66rem) {
+  footer {
+    min-height: 10vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .footer-links {
@@ -168,6 +208,16 @@ footer a {
 }
 .footer-links a {
   font-size: 1.2rem;
+}
+@media (min-width: 36rem) {
+  .footer-links a {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 46rem) {
+  .footer-links a {
+    font-size: 2rem;
+  }
 }
 .footer-links::before {
   content: "";

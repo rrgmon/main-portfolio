@@ -1,9 +1,20 @@
 .container {
   font-size: 3rem;
-  min-height: 80vh;
   letter-spacing: 0.2rem;
   line-height: 1.6;
-  padding: 0 2rem;
+  margin: 1rem;
+  padding: 0 1rem;
+  @media (min-width: 36rem) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: 46rem) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 56rem) {
+    font-size: 6rem;
+  }
 }
 
 .main-text {
