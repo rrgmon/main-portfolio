@@ -1,18 +1,17 @@
-// 'use strict';
+'use strict';
 
-// const express = require('express');
-// const path = require('path');
-// const app = express();
-// const PORT = process.env.port || 3000;
+const express = require('express');
+const path = require('path');
+const app = express();
+const PORT = process.env.port || 3000;
 
-// app.set('view engine', 'ejs');
-// app.set('views', path.join(__dirname, '/views'));
-// app.set(express.static(path.join(__dirname, '../../../', 'dist', 'css')));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
-// app.get('/', (req, res) => {
-//   res.render('home.ejs');
-// });
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
 
-// app.listen(PORT, () => {
-//   console.log(`Listening on ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
+});
