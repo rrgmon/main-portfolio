@@ -1,0 +1,53 @@
+header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $clr-neutral-100;
+  }
+}
+
+.signature,
+.navigation {
+  padding: 0 2rem;
+}
+
+.signature {
+  font-size: 2rem;
+}
+
+.navigation {
+  display: flex;
+}
+
+.nav-links {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0.4rem;
+  a {
+    font-size: 1.2rem;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: $clr-neutral-100;
+
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+}

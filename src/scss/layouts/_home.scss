@@ -1,0 +1,32 @@
+.container {
+  font-size: 3rem;
+  min-height: 80vh;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+  padding: 0 2rem;
+}
+
+.main-text {
+  p {
+    &:nth-child(1) {
+      span {
+        &:nth-child(1) {
+          color: $clr-accent-1;
+        }
+        &:nth-child(2) {
+          color: $clr-accent-2;
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+          color: $clr-accent-3;
+        }
+      }
+    }
+  }
+}
+
+.day-text {
+  span {
+    color: $clr-accent-1;
+  }
+}
