@@ -17,9 +17,7 @@
     "url": "https://github.com/rrgmon/rrgmon.github.io/issues"
   },
   "homepage": "https://github.com/rrgmon/rrgmon.github.io#readme",
-  "devDependencies": {
-    "parcel": "^2.0.0-beta.3.1"
-  },
+  "devDependencies": {},
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1"
