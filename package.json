@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/views/layout.ejs",
     "build": "parcel build src/layout.ejs",
-    "start": "node src/app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
