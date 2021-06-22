@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Regimon | Portfolio</title>
+    <link rel="preconnect" href="2118b5c1f15e6933b2f00e133c30ecbf">
+    <link href="41a6497f8d1900d8916a0396a31ba1e4" rel="stylesheet">
+    <link rel="stylesheet" href="5f1d2693d0a57fa3cf64343d08b1fd1e">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="signature">RRGMON</a>
+      <div class="navigation">
+        <div class="nav-links"><a href="#project">Project</a></div>
+        <div class="nav-links"><a href="#contact">Contact</a></div>
+      </div>
+    </header>
+    <section id="home" class="container">
+      <div class="main-text">
+        <p>
+          Hello there! I am <span>Rohit Regimon</span> and I am a
+          <span>Front-end developer</span> based in India. My goal is to develop
+          <span>beautiful</span> and <span>user friendly</span> websites.
+        </p>
+      </div>
+      <div class="day-text">
+        <p>Have a great <span>Sunday</span>!</p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <a href="e706f379c8102b9de463c65eb5ebcd3d">Github</a>
+      </div>
+      <div class="footer-links">
+        <a href="50fe5c7ca15acc5bbc6bf9212476688d">LinkedIn</a>
+      </div>
+    </footer>
+  </body>
+</html>

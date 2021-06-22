@@ -2,9 +2,10 @@
   "name": "rrgmon.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node src/app.js"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,9 @@
     "url": "https://github.com/rrgmon/rrgmon.github.io/issues"
   },
   "homepage": "https://github.com/rrgmon/rrgmon.github.io#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.1"
-  }
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "parcel": "^2.0.0-beta.3.1"
+  },
+  "dependencies": {}
 }
