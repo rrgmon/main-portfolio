@@ -2,7 +2,8 @@
 
 const cardEl = document.getElementsByClassName('card');
 const cardPopEl = document.getElementsByClassName('card-pop');
-let mediaQueryEl = window.matchMedia('(max-width: 56em)');
+const mediaQueryEl = window.matchMedia('(max-width: 900px)');
+
 function cardPopAdd() {
   for (let i = 0; i < cardEl.length; i++) {
     cardEl[i].addEventListener('mouseover', () => {
@@ -35,7 +36,4 @@ function widthDetect(mediaQueryEl) {
   }
 }
 
-mediaQueryEl.addEventListener(
-  'change onload resize',
-  widthDetect(mediaQueryEl)
-);
+mediaQueryEl.addEventListener('onload change', widthDetect(mediaQueryEl));
