@@ -1,6 +1,0 @@
-'use strict';
-const cardEl = document.querySelector('.card');
-const cardPopEl = document.querySelector('.card-pop');
-function cardPopDisplayFlex() {
-    cardPopEl.classList.add('card-pop-display');
-}
