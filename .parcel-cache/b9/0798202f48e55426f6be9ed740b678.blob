@@ -1,0 +1,41 @@
+// 'use strict';
+// const cardEl = document.getElementsByClassName('card');
+// const cardPopEl = document.getElementsByClassName('card-pop');
+// let i = 0;
+// function cardPopDisplayFlex() {
+//   while (i < cardPopEl.length) {
+//     cardPopEl[i].classList.toggle('card-pop-display');
+//     i++;
+//   }
+// }
+// // function cardPopDisplayNone() {
+// //   cardPopEl.classList.remove('card-pop-display');
+// // }
+// let mediaQueryEl = window.matchMedia('(max-width: 56em)');
+// function widthDetect(mediaQueryEl) {
+//   if (mediaQueryEl.matches) {
+//     while (i < cardEl.length) {
+//       cardEl[i].addEventListener('mouseover', cardPopDisplayFlex);
+//       cardEl[i].addEventListener('mouseout', cardPopDisplayFlex);
+//       i++;
+//     }
+//   } else {
+//     while (i < cardEl.length) {
+//       cardEl[i].removeEventListener('mouseover', cardPopDisplayFlex);
+//       cardEl[i].removeEventListener('mouseout', cardPopDisplayFlex);
+//       i++;
+//     }
+//   }
+// }
+// mediaQueryEl.addEventListener('change', () => {
+//   widthDetect(mediaQueryEl);
+// });
+// mediaQueryEl.addEventListener('onload', () => {
+//   widthDetect(mediaQueryEl);
+// });
+// widthDetect(mediaQueryEl);
+'use strict';
+const cardEl = document.getElementsByClassName('card');
+const cardPopEl = document.getElementsByClassName('card-pop');
+console.log(cardEl);
+console.log(cardPopEl);

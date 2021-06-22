@@ -1,0 +1,18 @@
+'use strict';
+const cardEl = document.querySelector('.card');
+const cardPopEl = document.querySelector('.card-pop');
+function cardPopDisplayFlex() {
+    cardPopEl.classList.toggle('card-pop-display');
+}
+let x = window.matchMedia('(max-width: 56em)');
+function widthDetect(x1) {
+    if (x1.matches) cardEl.addEventListener('click', cardPopDisplayFlex);
+    else cardEl.removeEventListener('click', cardPopDisplayFlex);
+}
+x.addEventListener('change', ()=>{
+    widthDetect(x);
+});
+x.addEventListener('onload', ()=>{
+    widthDetect(x);
+});
+widthDetect(x);

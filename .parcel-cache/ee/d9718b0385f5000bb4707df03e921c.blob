@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page titles, meta descriptions, site speed, mobile friendly web design">
+    <title>Rohit Regimon | Portfolio</title>
+    <link rel="preconnect" href="d7c2b8c89e8843c0697300fa104dd24b">
+    <link href="32b805257c0857dc30bed63b53dadaae" rel="stylesheet">
+    <link rel="stylesheet" href="a60f8e0cde6a6effe90044aab8273e00">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="signature">RRGMON</a>
+      <div class="navigation">
+        <div class="nav-links"><a href="#project">Project</a></div>
+        <div class="nav-links"><a href="#contact">Contact</a></div>
+      </div>
+    </header>
+    <section id="home">
+      <div class="container">
+        <div class="main-text">
+          <p>
+            Hello there! I am <span>Rohit Regimon</span> and I am a
+            <span>Front-end developer</span> based in India. My goal is to
+            develop <span>beautiful</span> and
+            <span>user friendly</span> websites.
+          </p>
+        </div>
+        <div class="day-text">
+          <p>Have a great <span>Sunday</span>!</p>
+        </div>
+      </div>
+    </section>
+    <section id="project">
+      <div class="container">
+        <h2>Projects:</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card-pop">
+              <div class="card-pop-text">
+                <h3>Frontendmentor - 1</h3>
+                <p>
+                  Article preview with pop-up social links on clicking share
+                  icon.
+                </p>
+                <div class="card-pop-links">
+                  <div class="code-links">
+                    <a href="5520d2af7fb4cebf15638a9673fc9d00">Github</a>
+                    <a href="31fcc7c997f0915638b034a73baf6ae8">Live</a>
+                  </div>
+                  <div class="tech-stack">
+                    <img src="fda4b1e7af8bdef2a62df38e5aaf5739" alt="html logo">
+                    <img src="a3ce7618e68f61177918cf3a9c38e160" alt="css logo">
+                    <img src="733e584226983c1290679faea7bcd3d1" alt="javascript logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="0278c64b2f5439e730c5bab639a5c596" alt="Random image">
+          </div>
+          <div class="card">
+            <div class="card-pop">
+              <div class="card-pop-text">
+                <h3>Frontendmentor - 1</h3>
+                <p>
+                  Article preview with pop-up social links on clicking share
+                  icon.
+                </p>
+                <div class="card-pop-links">
+                  <div class="code-links">
+                    <a href="5520d2af7fb4cebf15638a9673fc9d00">Github</a>
+                    <a href="31fcc7c997f0915638b034a73baf6ae8">Live</a>
+                  </div>
+                  <div class="tech-stack">
+                    <img src="fda4b1e7af8bdef2a62df38e5aaf5739" alt="html logo">
+                    <img src="a3ce7618e68f61177918cf3a9c38e160" alt="css logo">
+                    <img src="733e584226983c1290679faea7bcd3d1" alt="javascript logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="f7f9420e563b5291be71ac49ef244c88" alt="Random image">
+          </div>
+          <div class="card">
+            <div class="card-pop">
+              <div class="card-pop-text">
+                <h3>Frontendmentor - 1</h3>
+                <p>
+                  Article preview with pop-up social links on clicking share
+                  icon.
+                </p>
+                <div class="card-pop-links">
+                  <div class="code-links">
+                    <a href="5520d2af7fb4cebf15638a9673fc9d00">Github</a>
+                    <a href="31fcc7c997f0915638b034a73baf6ae8">Live</a>
+                  </div>
+                  <div class="tech-stack">
+                    <img src="fda4b1e7af8bdef2a62df38e5aaf5739" alt="html logo">
+                    <img src="a3ce7618e68f61177918cf3a9c38e160" alt="css logo">
+                    <img src="733e584226983c1290679faea7bcd3d1" alt="javascript logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="0278c64b2f5439e730c5bab639a5c596" alt="Random image">
+          </div>
+          <div class="card">
+            <div class="card-pop">
+              <div class="card-pop-text">
+                <h3>Frontendmentor - 1</h3>
+                <p>
+                  Article preview with pop-up social links on clicking share
+                  icon.
+                </p>
+                <div class="card-pop-links">
+                  <div class="code-links">
+                    <a href="5520d2af7fb4cebf15638a9673fc9d00">Github</a>
+                    <a href="31fcc7c997f0915638b034a73baf6ae8">Live</a>
+                  </div>
+                  <div class="tech-stack">
+                    <img src="fda4b1e7af8bdef2a62df38e5aaf5739" alt="html logo">
+                    <img src="a3ce7618e68f61177918cf3a9c38e160" alt="css logo">
+                    <img src="733e584226983c1290679faea7bcd3d1" alt="javascript logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="0278c64b2f5439e730c5bab639a5c596" alt="Random image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="c7bb26c5e85e29dbd5807c89946ff381"></script>
+  </body>
+</html>

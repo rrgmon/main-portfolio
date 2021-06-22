@@ -1,0 +1,26 @@
+'use strict';
+const cardEl = document.querySelector('.card');
+const cardPopEl = document.getElementsByClassName('card-pop');
+function cardPopDisplayFlex() {
+    for(let i = 0; i < cardPopEl.length; i++)cardPopEl[i].classList.add('card-pop-display');
+}
+function cardPopDisplayNone() {
+    for(let i = 0; i < cardPopEl.length; i++)cardPopEl[i].classList.remove('card-pop-display');
+}
+let mediaQueryEl = window.matchMedia('(max-width: 56em)');
+function widthDetect(mediaQueryEl1) {
+    if (mediaQueryEl1.matches) {
+        cardEl.addEventListener('mouseover', cardPopDisplayFlex);
+        cardEl.addEventListener('mouseout', cardPopDisplayNone);
+    } else {
+        cardEl.removeEventListener('mouseover', cardPopDisplayFlex);
+        cardEl.removeEventListener('mouseout', cardPopDisplayNone);
+    }
+}
+mediaQueryEl.addEventListener('change', ()=>{
+    widthDetect(mediaQueryEl);
+});
+mediaQueryEl.addEventListener('onload', ()=>{
+    widthDetect(mediaQueryEl);
+});
+widthDetect(mediaQueryEl);

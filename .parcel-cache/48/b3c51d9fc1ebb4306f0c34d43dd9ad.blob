@@ -1,0 +1,17 @@
+'use strict';
+const cardEl = document.querySelector('.card');
+const cardPopEl = document.querySelector('.card-pop');
+function cardPopDisplayFlex() {
+    cardPopEl.classList.add('card-pop-display');
+}
+function cardPopDisplayNone() {
+    cardPopEl.classList.remove('card-pop-display');
+}
+let limitFunc = function() {
+    if (window.innerWidth > 896) {
+        cardEl.addEventListener('mouseover', cardPopDisplayFlex);
+        cardEl.addEventListener('mouseout', cardPopDisplayNone);
+    }
+};
+window.addEventListener('resize', limitFunc);
+window.addEventListener('onload', limitFunc);

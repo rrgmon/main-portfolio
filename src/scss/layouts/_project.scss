@@ -1,0 +1,151 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  place-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  @media (min-width: 36em) {
+    grid-template-columns: repeat(auto-fit, minmax(46rem, 1fr));
+  }
+  @media (min-width: 56em) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 56em) {
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $clr-primary-700, $alpha: 0);
+      transition: background-color 0.3s linear;
+    }
+    &:hover::before {
+      background-color: rgba($color: $clr-primary-700, $alpha: 0.8);
+    }
+  }
+
+  @media (min-width: 56em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+  }
+
+  img {
+    border-radius: 1rem;
+    @media (min-width: 56em) {
+      grid-area: a;
+    }
+  }
+}
+
+.card-pop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 56em) {
+    display: none;
+  }
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media (min-width: 56em) {
+    position: static;
+    grid-area: b;
+  }
+}
+
+.card-pop-text {
+  h3 {
+    font-size: 2.2rem;
+    margin: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    min-width: 30ch;
+    text-align: left;
+    margin: 1rem;
+  }
+
+  @media (min-width: 36em) {
+    h3 {
+      font-size: 2.6rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.card-pop-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: 36em) {
+    justify-content: space-between;
+  }
+}
+
+.code-links {
+  a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $clr-neutral-300;
+    text-align: left;
+    margin: 1rem;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $clr-neutral-100;
+
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    @media (min-width: 36em) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.tech-stack {
+  display: none;
+
+  @media (min-width: 36em) {
+    display: flex;
+    gap: 2rem;
+    img {
+      min-width: 4rem;
+    }
+  }
+}
+
+.card-pop-display {
+  display: flex;
+}

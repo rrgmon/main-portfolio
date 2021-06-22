@@ -1,23 +1,8 @@
 .container {
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-  line-height: 1.6;
-  margin: 1rem;
-  padding: 0 1rem;
   @media (min-width: 36em) {
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 4rem;
-  }
-
-  @media (min-width: 66em) {
-    font-size: 5rem;
-  }
-
-  @media (min-width: 86rem) {
-    font-size: 6rem;
   }
 }
 
@@ -41,7 +26,21 @@
 }
 
 .day-text {
+  font-size: 2.4rem;
+  margin: 2rem 0;
   span {
     color: $clr-accent-1;
+  }
+
+  @media (min-width: 36em) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: 66em) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 86rem) {
+    font-size: 6rem;
   }
 }

@@ -1,0 +1,6 @@
+'use strict';
+const cardEl = document.querySelector('.card');
+const cardPopEl = document.querySelector('.card-pop');
+ccardEl.addEventListener('click', ()=>{
+    cardPopEl.classList.toggle('card-pop-display');
+});

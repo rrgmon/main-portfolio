@@ -1,0 +1,24 @@
+'use strict';
+const cardEl = document.getElementsByClassName('card');
+const cardPopEl = document.getElementsByClassName('card-pop');
+function cardPopDisplayFlex() {
+    for(let i = 0; i < cardPopEl.length; i++)cardPopEl[i].classList.toggle('card-pop-display');
+}
+let mediaQueryEl = window.matchMedia('(max-width: 56em)');
+function widthDetect(mediaQueryEl1) {
+    if (mediaQueryEl1.matches) for(let i = 0; i < cardEl.length; i++){
+        cardEl[i].addEventListener('mouseover', cardPopDisplayFlex);
+        cardEl[i].addEventListener('mouseout', cardPopDisplayFlex);
+    }
+    else for(let i1 = 0; i1 < cardEl.length; i1++){
+        cardEl[i1].removeEventListener('mouseover', cardPopDisplayFlex);
+        cardEl[i1].removeEventListener('mouseout', cardPopDisplayFlex);
+    }
+}
+mediaQueryEl.addEventListener('change', ()=>{
+    widthDetect(mediaQueryEl);
+});
+mediaQueryEl.addEventListener('onload', ()=>{
+    widthDetect(mediaQueryEl);
+});
+widthDetect(mediaQueryEl);

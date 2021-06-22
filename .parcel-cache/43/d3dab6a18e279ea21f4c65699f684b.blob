@@ -1,0 +1,22 @@
+'use strict';
+const cardEl = document.querySelector('.card');
+const cardPopEl = document.querySelector('.card-pop');
+function cardPopDisplayFlex() {
+    cardPopEl.classList.add('card-pop-display');
+}
+function cardPopDisplayNone() {
+    cardPopEl.classList.remove('card-pop-display');
+}
+let limitFunc = function(x) {
+    if (x.matches) {
+        cardEl.addEventListener('mouseover', cardPopDisplayFlex);
+        cardEl.addEventListener('mouseout', cardPopDisplayNone);
+    } else {
+        cardEl.removeEventListener('mouseover', cardPopDisplayFlex);
+        cardEl.removeEventListener('mouseout', cardPopDisplayNone);
+    }
+};
+window.addEventListener('load', limitFunc);
+let x = window.matchMedia('(min-width: 56em)');
+limitFunc(x);
+x.addEventListener('change', limitFunc);
