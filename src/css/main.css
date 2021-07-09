@@ -275,7 +275,7 @@ footer p span {
 
 @media (min-width: 42em) {
   .container {
-    max-width: 80em;
+    max-width: 60em;
   }
 
   .projects-container {
