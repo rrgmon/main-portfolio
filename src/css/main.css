@@ -204,7 +204,21 @@ p {
 }
 
 /* Contact styles */
-#contact .contact-form {
+#contact {
+  padding-bottom: var(--margin-main);
+}
+.email {
+  font-size: 1.2rem;
+}
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-main);
+  font-size: 1.2rem;
+}
+
+/* TODO Need to set up contact form and then uncomment these */
+/* #contact .contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,6 +244,21 @@ textarea:focus {
   border-color: var(--clr-accent);
   outline: 0;
 }
+
+.submit {
+  align-self: flex-start;
+  font-size: var(--fnt-p);
+  padding: 1rem 3rem;
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-accent);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary-100);
+} */
 
 /* footer styles */
 footer {

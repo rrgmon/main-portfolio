@@ -181,29 +181,35 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out to me!</p>
-        <form class="contact-form">
-          <label class="contact-fields" for="name"
-            >Name: <input type="text"
+        <!-- <form
+          class="contact-form"
+          action="https://formspree.io/f/mbjqajgo"
+          method="POST"
+        >
+          <label class="contact-fields">
+            Name: <input type="text" name="_name"
           /></label>
-          <label class="contact-fields" for="email"
-            >Email: <input type="email"
-          /></label>
-          <label class="contact-fields" for="message"
-            >Message:
-            <textarea
-              name="message"
-              id="message"
-              cols="10"
-              rows="10"
-            ></textarea>
+          <label class="contact-fields">
+            Your email:
+            <input type="email" name="_replyto" />
           </label>
-        </form>
+          <label class="contact-fields">
+            Your message:
+            <textarea name="message" cols="10" rows="10"></textarea>
+          </label>
+          <button class="submit" type="submit">Send</button>
+        </form> -->
+        <p class="email"><strong>Email:</strong> rrgmon@protonmail.com</p>
+        <ul class="contact-details">
+          <li><a href="https://github.com/rrgmon">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/rrgmon/">LinkedIn</a></li>
+          <li><a href="https://twitter.com/rohitregimon">Twitter</a></li>
+        </ul>
       </section>
     </main>
     <footer class="container">
       <p>Have a great <span class="current-day">Day</span> !</p>
     </footer>
-
     <script src="./src/js/script.js"></script>
   </body>
 </html>
