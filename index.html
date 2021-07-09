@@ -29,6 +29,26 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Hi, I&rsquo;m Rohit! I am a Front-end developer based in India. I have experience working in a Professional team environment and Freelancing. I am still finding my place in the interwebs but working on my goal to develop efficient and user-friendly websites."
+    />
+    <link rel="canonical" href="https://rrgmon.dev/" />
+
+    <meta property="og:url" content="https://rrgmon.dev/" />
+    <meta property="og:title" content="Rohit Regimon" />
+    <meta
+      property="og:description"
+      content="Hi, I&rsquo;m Rohit! I am a Front-end developer based in India. I have experience working in a Professional team environment and Freelancing. I am still finding my place in the interwebs but working on my goal to develop efficient and user-friendly websites."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rohit Regimon" />
+    <meta
+      name="twitter:description"
+      content="Hi, I&rsquo;m Rohit! I am a Front-end developer based in India. I have experience working in a Professional team environment and Freelancing. I am still finding my place in the interwebs but working on my goal to develop efficient and user-friendly websites."
+    />
+
     <link rel="stylesheet" href="./src/css/main.css" />
     <title>Rohit Regimon</title>
   </head>
@@ -45,7 +65,7 @@
     </header>
     <main class="container">
       <section id="home">
-        <h1>Hi, I’m Rohit</h1>
+        <h1>Hi, I&rsquo;m Rohit</h1>
         <p>
           I am a <strong>Front-end developer</strong> based in India. I have
           experience working in a
@@ -162,23 +182,21 @@
         <h2>Contact</h2>
         <p>Feel free to reach out to me!</p>
         <form class="contact-form">
-          <div class="contact-fields">
-            <label for="name">Name:</label>
-            <input type="text" />
-          </div>
-          <div class="contact-fields">
-            <label for="email">Email:</label>
-            <input type="email" />
-          </div>
-          <div class="contact-fields">
-            <label for="message">Message:</label>
+          <label class="contact-fields" for="name"
+            >Name: <input type="text"
+          /></label>
+          <label class="contact-fields" for="email"
+            >Email: <input type="email"
+          /></label>
+          <label class="contact-fields" for="message"
+            >Message:
             <textarea
               name="message"
               id="message"
               cols="10"
               rows="10"
             ></textarea>
-          </div>
+          </label>
         </form>
       </section>
     </main>

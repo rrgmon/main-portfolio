@@ -27,6 +27,7 @@ html {
 }
 
 body {
+  min-width: 100%;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--clr-primary-100);
@@ -214,11 +215,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.contact-fields label {
   font-size: var(--fnt-p);
-  padding-bottom: calc(var(--padding-main) - 1rem);
+  gap: calc(var(--padding-main) - 1rem);
 }
 
 .contact-fields input,
