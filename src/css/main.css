@@ -53,6 +53,7 @@ body {
 
 strong {
   font-weight: bold;
+  color: var(--clr-accent);
 }
 
 img {
@@ -214,11 +215,11 @@ p {
   display: flex;
   align-items: center;
   gap: var(--margin-main);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin: var(--margin-main) 0;
 }
 
-/* TODO Need to set up contact form and then uncomment these */
-/* #contact .contact-form {
+#contact .contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,7 +259,7 @@ textarea:focus {
 .submit:hover {
   background-color: var(--clr-accent);
   color: var(--clr-primary-100);
-} */
+}
 
 /* footer styles */
 footer {
