@@ -198,18 +198,18 @@
           data-netlify="true"
         >
           <label class="contact-fields">
-            Name: <input type="text" name="name"
+            Name: <input type="text" name="name" required
           /></label>
           <label class="contact-fields">
             Email:
-            <input type="email" name="email" />
+            <input type="email" name="email" required />
           </label>
           <label class="contact-fields">
             Message:
-            <textarea name="message" cols="10" rows="10"></textarea>
+            <textarea name="message" cols="10" rows="10" required></textarea>
           </label>
           <div class="contact-fields">
-            <div data-netlify-recaptcha="true"></div>
+            <div data-netlify-recaptcha="true" aria-required="true"></div>
           </div>
           <button class="submit" type="submit">Send</button>
         </form>
