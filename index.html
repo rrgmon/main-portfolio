@@ -191,7 +191,12 @@
             <p class="email">rrgmon@protonmail.com</p>
           </li>
         </ul>
-        <form class="contact-form">
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <label class="contact-fields">
             Name: <input type="text" name="name"
           /></label>
@@ -203,6 +208,9 @@
             Message:
             <textarea name="message" cols="10" rows="10"></textarea>
           </label>
+          <div class="contact-fields">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <button class="submit" type="submit">Send</button>
         </form>
       </section>
