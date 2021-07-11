@@ -1,6 +1,6 @@
 :root {
   --clr-primary-100: hsl(0, 0%, 100%);
-  --clr-primary-800: hsl(0, 0%, 0%);
+  --clr-primary-800: hsl(0, 0%, 10%);
   --clr-neutral-600: hsl(0, 0%, 60%);
   --clr-neutral-800: hsl(0, 0%, 16%);
   --clr-accent: hsl(207, 100%, 50%);
@@ -254,6 +254,7 @@ textarea:focus {
   color: var(--clr-accent);
   background-color: transparent;
   cursor: pointer;
+  transition: all 150ms linear;
 }
 
 .submit:hover {
@@ -276,7 +277,7 @@ footer p span {
 
 @media (min-width: 42em) {
   .container {
-    max-width: 60em;
+    max-width: 70em;
   }
 
   .projects-container {
@@ -284,7 +285,7 @@ footer p span {
   }
 
   .project-card {
-    max-width: 40em;
+    max-width: 35em;
     min-height: 40em;
     display: flex;
     flex-direction: column;
